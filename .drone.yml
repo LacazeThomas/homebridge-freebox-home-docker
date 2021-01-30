@@ -1,4 +1,4 @@
----
+###
 kind: pipeline
 type: docker
 name: linux-amd64
@@ -22,5 +22,4 @@ steps:
     event:
     - push
     - tag
-
----
+###
