@@ -21,4 +21,17 @@ steps:
     event:
     - push
     - tag
+
+- name: publish readme
+  image: jlesage/drone-push-readme
+  settings:
+    repo: thomaslacaze/homebridge-freebox-home
+    username:
+      from_secret: dockerhub_username
+    password:
+      from_secret: dockerhub_password
+    readme: README.md
+  when:
+    branch:
+    - master
 ###
