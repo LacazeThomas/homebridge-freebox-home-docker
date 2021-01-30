@@ -23,14 +23,14 @@ steps:
     - tag
 
 - name: publish readme
-  image: peterevans/dockerhub-description:2
+  image: peterevans/dockerhub-description:2.4.1
   settings:
     DOCKERHUB_REPOSITORY: thomaslacaze/homebridge-freebox-home
     DOCKERHUB_USERNAME:
       from_secret: docker_username
     DOCKERHUB_PASSWORD:
       from_secret: docker_password
-    README_FILEPATH: README.md
+    README_FILEPATH: /drone/src/README.md
   when:
     branch:
     - master
