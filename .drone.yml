@@ -23,7 +23,7 @@ steps:
     - tag
 
 - name: publish readme
-  image: peterevans/dockerhub-description:2.4.1
+  image: thomaslacaze/dockerhub-description:2.4.1
   pull: always
   settings:
     repository: thomaslacaze/homebridge-freebox-home
