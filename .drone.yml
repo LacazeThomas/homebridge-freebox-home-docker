@@ -12,7 +12,6 @@ steps:
   image: plugins/docker
   settings:
     auto_tag: true
-    auto_tag_suffix: linux-amd64
     repo: thomaslacaze/homebridge-freebox-home
     username:
       from_secret: docker_username
