@@ -26,12 +26,12 @@ steps:
   image: peterevans/dockerhub-description:2.4.1
   pull: always
   settings:
-    DOCKERHUB_REPOSITORY: thomaslacaze/homebridge-freebox-home
-    DOCKERHUB_USERNAME:
+    PLUGIN_REPOSITORY: thomaslacaze/homebridge-freebox-home
+    PLUGIN_USERNAME:
       from_secret: docker_username
-    DOCKERHUB_PASSWORD:
+    PLUGIN_PASSWORD:
       from_secret: docker_password
-    README_FILEPATH: /drone/src/README.md
+    PLUGIN_README: /drone/src/README.md
   when:
     branch:
     - master
