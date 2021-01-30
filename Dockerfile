@@ -11,4 +11,6 @@ RUN npm install
 VOLUME [ "/root/.homebridge/config.json" ]
 VOLUME [ "/usr/src/app/src/.store" ]
 
+EXPOSE 8888
+
 CMD ["npm", "start"]
