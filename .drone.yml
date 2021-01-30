@@ -1,16 +1,28 @@
-name: default
+---
+
 
 kind: pipeline
 type: docker
+name: linux-amd64
+
+platform:
+  arch: amd64
+  os: linux
 
 steps:
-
-- name: push docker image  
+- name: publish
   image: plugins/docker
   settings:
     auto_tag: true
+    auto_tag_suffix: linux-amd64
     repo: thomaslacaze/homebridge-freebox-home
     username:
       from_secret: docker_username
     password:
       from_secret: docker_password
+  when:
+    event:
+    - push
+    - tag
+
+---
