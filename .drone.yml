@@ -34,4 +34,5 @@ steps:
   when:
     branch:
     - master
+    - main
 ###
