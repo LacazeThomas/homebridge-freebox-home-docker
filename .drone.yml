@@ -5,12 +5,11 @@ type: docker
 
 steps:
 
-- name: push dockerhub  
+- name: push docker image  
   image: plugins/docker
   settings:
     auto_tag: true
     repo: thomaslacaze/homebridge-freebox-home
-    no_cache: true
     username:
       from_secret: docker_username
     password:
