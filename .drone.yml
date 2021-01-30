@@ -23,14 +23,14 @@ steps:
     - tag
 
 - name: publish readme
-  image: jlesage/drone-push-readme
-  settings:
-    repo: thomaslacaze/homebridge-freebox-home
-    username:
+  image: peterevans/dockerhub-description:2
+  environment:
+    DOCKERHUB_REPOSITORY: thomaslacaze/homebridge-freebox-home
+    DOCKERHUB_USERNAME:
       from_secret: docker_username
-    password:
+    DOCKERHUB_PASSWORD:
       from_secret: docker_password
-    readme: README.md
+    README_FILEPATH: README.md
   when:
     branch:
     - master
