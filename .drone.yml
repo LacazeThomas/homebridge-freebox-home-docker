@@ -24,7 +24,7 @@ steps:
 
 - name: publish readme
   image: peterevans/dockerhub-description:2
-  environment:
+  settings:
     DOCKERHUB_REPOSITORY: thomaslacaze/homebridge-freebox-home
     DOCKERHUB_USERNAME:
       from_secret: docker_username
