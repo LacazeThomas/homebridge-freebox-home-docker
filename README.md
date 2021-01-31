@@ -20,20 +20,17 @@ freeboxapi:
         - $PWD/freeboxAPI/store:/usr/src/app/src/.store
     network_mode: host
 
-    homebridge:
-      container_name: homebridge
-      image: oznu/homebridge:3.3.0
-      restart: always
-      network_mode: host
-      environment:
+homebridge:
+    container_name: homebridge
+    image: oznu/homebridge:3.3.0
+    restart: always
+    environment:
         - TZ=Europe/Paris
         - PGID=1000
         - PUID=1000
-        - HOMEBRIDGE_INSECURE=1
-      volumes:
+    volumes:
         - $PWD/homebridge/:/homebridge
-      labels:
-        - traefik.enable=false
+    network_mode: host
 ```
 After configuring the config.json with freebox accessories, you need create a token between your freebox and freebox API and give it three permsissions:
 
