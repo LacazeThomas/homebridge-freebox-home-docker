@@ -10,6 +10,8 @@
 
 ## Usage
 
+Create a file `store` and put this : `"{token: null,track: null}"`
+
 ```yml
 freeboxapi:
     image: thomaslacaze/homebridge-freebox-home:1.0.0
